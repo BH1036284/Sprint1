@@ -1,0 +1,353 @@
+@page "/"
+@rendermode InteractiveServer
+
+@using System.Text
+@using System.Linq
+@using System.Globalization
+@using System.IO
+@using Microsoft.AspNetCore.Components.Forms
+
+<h3>CSV File Processor v9</h3>
+
+<InputFile OnChange="OnFileChange" />
+<br />
+
+@if (errorMessage != null)
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> @errorMessage
+    </div>
+}
+
+@if (csvData != null && csvData.Any())
+{
+    @if (false)
+    {
+        <h4>Processed Data</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Event Time</th>
+                    <th>Location</th>
+                    <th>Reader</th>
+                    <th>ID Hash</th>
+                    <th>Device ID</th>
+                    <th>Machine</th>
+                </tr>
+            </thead>
+            <tbody>-->
+                @foreach (var row in csvData)
+                {
+                    <tr>
+                        <td>@row.EventTime</td>
+                        <td>@row.Location</td>
+                        <td>@row.ReaderDesc</td>
+                        <td>@row.IDHash</td>
+                        <td>@row.DeviceID</td>
+                        <td>@row.Machine</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <h4>Statistics</h4>
+    <ul>
+        <li>Most Used Reader: @mostUsedReader</li>
+        <li>Unique Users: @uniqueUsers</li>
+        <li>Least Active User: @leastActiveUser</li>
+    </ul>
+
+    <h4>Top 5 Readers by Scan Count</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Reader ID</th>
+                <th>Reader Name</th>
+                <th># of Scans</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var reader in topReaders)
+            {
+                <tr>
+                    <td>@reader.ReaderId</td>
+                    <td>@reader.ReaderName</td>
+                    <td>@reader.ScanCount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Scans Per Day</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Day of Week</th>
+                <th># of Scans</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var stat in dailyStats)
+            {
+                <tr @onclick="@(() => ShowTopReadersForDay(stat.DayOfWeek))" style="cursor: pointer;">
+                    <td>@stat.DayOfWeek</td>
+                    <td>@stat.ScanCount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @if (selectedDay != null)
+    {
+        <h5>Top Readers for @selectedDay</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Reader ID</th>
+                    <th>Reader Name</th>
+                    <th># of Scans</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var reader in selectedDayReaders)
+                {
+                    <tr>
+                        <td>@reader.ReaderId</td>
+                        <td>@reader.ReaderName</td>
+                        <td>@reader.ScanCount</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+}
+
+@code {
+    private List<CsvRecord> csvData = new List<CsvRecord>();
+    private string mostUsedReader = "";
+    private string uniqueUsers = "";
+    private string leastActiveUser = "";
+    private string errorMessage = null;
+
+    const int MAX_FILESIZE = 5000 * 1024; // 2 MB
+
+    private string selectedDay = null;
+    private List<ReaderStat> selectedDayReaders = new();
+
+
+    public class CsvRecord
+    {
+        public DateTime EventTime { get; set; }
+        public string? Location { get; set; } // Nullable
+        public string? ReaderDesc { get; set; } // Nullable
+        public string? IDHash { get; set; } // Nullable
+        public int DeviceID { get; set; }
+        public int Machine { get; set; }
+    }
+
+    public class ReaderStat
+    {
+        public string ReaderId { get; set; }
+        public string ReaderName { get; set; }
+        public int ScanCount { get; set; }
+    }
+
+    private List<ReaderStat> topReaders = new();
+
+
+    private List<DailyStat> dailyStats = new List<DailyStat>();
+
+    public class DailyStat
+    {
+        public string DayOfWeek { get; set; } = "";
+        public int ScanCount { get; set; }
+    }
+
+
+    private async Task OnFileChange(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        if (file == null)
+        {
+            errorMessage = "No file selected.";
+            return;
+        }
+
+        try
+        {
+            using var stream = file.OpenReadStream(MAX_FILESIZE);
+            using var reader = new StreamReader(stream, Encoding.UTF8);
+            var csvContent = await reader.ReadToEndAsync();
+
+            // Display the raw CSV content to verify it's being read
+            Console.WriteLine("CSV Content:");
+            Console.WriteLine(csvContent); // Or use Debug.WriteLine for debugging in Blazor
+
+            // Clear any previous error message
+            errorMessage = null;
+
+            // Process the CSV data
+            ProcessCsvData(csvContent);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error reading file: {ex.Message}";
+        }
+    }
+
+    private void ProcessCsvData(string csvContent)
+    {
+        if (string.IsNullOrEmpty(csvContent))
+        {
+            errorMessage = "CSV content is empty.";
+            return;
+        }
+
+        var lines = csvContent.Split('\n');
+        if (lines.Length <= 1)
+        {
+            errorMessage = "CSV file is empty or doesn't contain any data.";
+            return;
+        }
+
+        var records = new List<CsvRecord>();
+
+        // Parse CSV
+        foreach (var line in lines.Skip(1).Where(l => !string.IsNullOrWhiteSpace(l))) // Skip header line
+        {
+            if (string.IsNullOrWhiteSpace(line)) continue;
+
+            //var lines = csvContent.Replace("\r", "").Split('\n');
+            var columns = line.Split(',');
+            if (columns.Length != 6)
+            {
+                errorMessage = "Data is missing or incomplete in one or more rows.";
+                continue; // Skip this row and proceed to the next
+            }
+
+            try
+            {
+                // Try to parse each column safely
+                if (DateTime.TryParse(columns[0], out var eventTime))
+                {
+                    records.Add(new CsvRecord
+                    {
+                        EventTime = eventTime,
+                        Location = string.IsNullOrEmpty(columns[1].Trim()) ? null : columns[1].Trim(),
+                        ReaderDesc = string.IsNullOrEmpty(columns[2].Trim()) ? null : columns[2].Trim(),
+                        IDHash = string.IsNullOrEmpty(columns[3].Trim()) ? null : columns[3].Trim(),
+                        DeviceID = int.TryParse(columns[4], out var deviceId) ? deviceId : 0,
+                        Machine = int.TryParse(columns[5], out var machine) ? machine : 0
+                    });
+                }
+                else
+                {
+                    errorMessage = "Invalid date format in the CSV file.";
+                    continue; // Skip this row and proceed to the next
+                }
+            }
+            catch (Exception ex)
+            {
+                errorMessage = $"Error processing row: {ex.Message}";
+                continue; // Skip this row and proceed to the next
+            }
+        }
+
+        if (records.Count == 0)
+        {
+            errorMessage = "No valid records were processed.";
+            return;
+        }
+
+        // Clean up: only keep rows with essential data
+        csvData = records
+            .Where(r => r.EventTime != default && r.IDHash != null && r.ReaderDesc != null)
+            .ToList();
+
+
+        // Generate Statistics
+        GenerateStatistics();
+    }
+
+    private void GenerateStatistics()
+    {
+        try
+        {
+            // Most Used Reader
+            mostUsedReader = csvData
+                .Where(r => r.ReaderDesc != null)
+                .GroupBy(r => r.ReaderDesc)
+                .OrderByDescending(g => g.Count())
+                .FirstOrDefault()?.Key ?? "N/A";
+
+            // Unique Users
+            uniqueUsers = csvData
+                .Where(r => r.IDHash != null)
+                .Select(r => r.IDHash)
+                .Distinct()
+                .Count()
+                .ToString();
+
+            // Least Active User
+            leastActiveUser = csvData
+                .Where(r => r.IDHash != null)
+                .GroupBy(r => r.IDHash)
+                .OrderBy(g => g.Count())
+                .FirstOrDefault()?.Key ?? "N/A";
+
+            // Top 5 Readers by Scan Count
+            topReaders = csvData
+                .Where(r => r.ReaderDesc != null)
+                .GroupBy(r => new { r.Machine, r.ReaderDesc }) // Group by MACHINE and READERDESC
+                .Select(g => new ReaderStat
+                {
+                    ReaderId = g.Key.Machine.ToString(),
+                    ReaderName = g.Key.ReaderDesc,
+                    ScanCount = g.Count()
+                })
+                .OrderByDescending(r => r.ScanCount)
+                .Take(5)
+                .ToList();
+
+            // Daily Scan Count
+            dailyStats = csvData
+                .GroupBy(r => r.EventTime.DayOfWeek)
+                .OrderBy(g => ((int)g.Key + 6) % 7) // Monday = 0, Sunday = 6
+                .Select(g => new DailyStat
+                {
+                    DayOfWeek = g.Key.ToString(),
+                    ScanCount = g.Count()
+                })
+                .ToList();
+
+
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error generating statistics: {ex.Message}";
+        }
+    }
+
+    private void ShowTopReadersForDay(string dayName)
+    {
+        selectedDay = dayName;
+
+        var day = (DayOfWeek)Enum.Parse(typeof(DayOfWeek), dayName);
+
+        selectedDayReaders = csvData
+            .Where(r => r.EventTime.DayOfWeek == day && r.ReaderDesc != null)
+            .GroupBy(r => new { r.Machine, r.ReaderDesc })
+            .OrderByDescending(g => g.Count())
+            .Take(5)
+            .Select(g => new ReaderStat
+            {
+                ReaderId = g.Key.Machine.ToString(),
+                ReaderName = g.Key.ReaderDesc,
+                ScanCount = g.Count()
+            })
+            .ToList();
+    }
+
+}
