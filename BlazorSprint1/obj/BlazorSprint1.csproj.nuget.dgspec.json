@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\BlazorSprint1.csproj": {}
+    "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\BlazorSprint1.csproj": {}
   },
   "projects": {
-    "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\BlazorSprint1.csproj": {
+    "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\BlazorSprint1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\BlazorSprint1.csproj",
+        "projectUniqueName": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\BlazorSprint1.csproj",
         "projectName": "BlazorSprint1",
-        "projectPath": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\BlazorSprint1.csproj",
-        "packagesPath": "C:\\Users\\bosto\\.nuget\\packages\\",
-        "outputPath": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\",
+        "projectPath": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\BlazorSprint1.csproj",
+        "packagesPath": "C:\\Users\\bh1036284\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bosto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bh1036284\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

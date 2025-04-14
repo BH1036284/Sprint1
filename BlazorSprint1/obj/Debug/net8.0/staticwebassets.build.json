@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "98aMQsV3/4WPjhwdWxULWx3m0I5KxA7PIC8fUzEhiz0=",
+  "Hash": "pLj3+/CSLHTD0s+sKJ2Eqa3T33p+lCMnv9GYWhMu7+c=",
   "Source": "BlazorSprint1",
   "BasePath": "_content/BlazorSprint1",
   "Mode": "Default",
@@ -10,17 +10,55 @@
     {
       "Name": "BlazorSprint1\\wwwroot",
       "Source": "BlazorSprint1",
-      "ContentRoot": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
       "BasePath": "_content/BlazorSprint1",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorSprint1.styles.css",
+      "Identity": "C:\\Users\\bh1036284\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\bh1036284\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\bh1036284\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\bh1036284\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\bh1036284\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\bh1036284\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\MudBlazor.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorSprint1.styles.css",
       "SourceId": "BlazorSprint1",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BlazorSprint1",
       "RelativePath": "BlazorSprint1.styles.css",
       "AssetKind": "All",
@@ -33,13 +71,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorSprint1.styles.css"
+      "OriginalItemSpec": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorSprint1.styles.css"
     },
     {
-      "Identity": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorSprint1.bundle.scp.css",
+      "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorSprint1.bundle.scp.css",
       "SourceId": "BlazorSprint1",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BlazorSprint1",
       "RelativePath": "BlazorSprint1.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +90,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorSprint1.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorSprint1.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\app.css",
       "SourceId": "BlazorSprint1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
       "BasePath": "_content/BlazorSprint1",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "BlazorSprint1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
       "BasePath": "_content/BlazorSprint1",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "BlazorSprint1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
       "BasePath": "_content/BlazorSprint1",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\favicon.png",
       "SourceId": "BlazorSprint1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
       "BasePath": "_content/BlazorSprint1",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -131,10 +169,29 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\images\\upload-cloud.png",
       "SourceId": "BlazorSprint1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
+      "BasePath": "_content/BlazorSprint1",
+      "RelativePath": "images/upload-cloud.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\upload-cloud.png"
+    },
+    {
+      "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\index.html",
+      "SourceId": "BlazorSprint1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
       "BasePath": "_content/BlazorSprint1",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -150,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\js\\chartHelper.js",
+      "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\js\\chartHelper.js",
       "SourceId": "BlazorSprint1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
       "BasePath": "_content/BlazorSprint1",
       "RelativePath": "js/chartHelper.js",
       "AssetKind": "All",
@@ -167,44 +224,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chartHelper.js"
-    },
-    {
-      "Identity": "C:\\Users\\bosto\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\MudBlazor.min.css",
-      "SourceId": "MudBlazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\bosto\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\",
-      "BasePath": "_content/MudBlazor",
-      "RelativePath": "MudBlazor.min.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\bosto\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\MudBlazor.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\bosto\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\MudBlazor.min.js",
-      "SourceId": "MudBlazor",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\bosto\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\",
-      "BasePath": "_content/MudBlazor",
-      "RelativePath": "MudBlazor.min.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\bosto\\.nuget\\packages\\mudblazor\\8.5.1\\staticwebassets\\MudBlazor.min.js"
     }
   ]
 }

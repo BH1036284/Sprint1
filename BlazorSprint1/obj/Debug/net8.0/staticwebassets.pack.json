@@ -1,31 +1,35 @@
 {
   "Files": [
     {
-      "Id": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorSprint1.bundle.scp.css",
+      "Id": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorSprint1.bundle.scp.css",
       "PackagePath": "staticwebassets\\BlazorSprint1.bundle.scp.css"
     },
     {
-      "Id": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\app.css",
+      "Id": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\index.html",
+      "Id": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\images\\upload-cloud.png",
+      "PackagePath": "staticwebassets\\images\\upload-cloud.png"
+    },
+    {
+      "Id": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Capstone\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\js\\chartHelper.js",
+      "Id": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\js\\chartHelper.js",
       "PackagePath": "staticwebassets\\js\\chartHelper.js"
     },
     {
