@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pLj3+/CSLHTD0s+sKJ2Eqa3T33p+lCMnv9GYWhMu7+c=",
+  "Hash": "ZsR00Ew8QPiB3N/lRUIVGk1UhFvlniDwaXiX2XWbCjw=",
   "Source": "BlazorSprint1",
   "BasePath": "_content/BlazorSprint1",
   "Mode": "Default",
@@ -167,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\images\\OGE-Logo.png",
+      "SourceId": "BlazorSprint1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\",
+      "BasePath": "_content/BlazorSprint1",
+      "RelativePath": "images/OGE-Logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\OGE-Logo.png"
     },
     {
       "Identity": "C:\\Users\\bh1036284\\Desktop\\Capstone Projects\\Capstone Final Project\\Sprint1\\BlazorSprint1\\wwwroot\\images\\upload-cloud.png",

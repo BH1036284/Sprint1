@@ -6,10 +6,26 @@
 @using System.Globalization
 @using System.IO
 @using Microsoft.AspNetCore.Components.Forms
+@using MudBlazor
 
-<h3>CSV File Processor v9</h3>
 
-<InputFile OnChange="OnFileChange" />
+<h3>CSV File Processor v12</h3>
+
+<label>
+    Upload File
+    <InputFile OnChange="OnFileChange" >Upload File</InputFile>
+</label>
+
+<MudFileUpload T="IReadOnlyList<IBrowserFile>" OnFilesChanged="OnFileChange">
+    <ActivatorContent>
+        <MudButton Variant="Variant.Filled"
+                   Color="Color.Primary"
+                   StartIcon="@Icons.Material.Filled.CloudUpload">
+            Multiple Files
+        </MudButton>
+    </ActivatorContent>
+</MudFileUpload>
+
 <br />
 
 @if (errorMessage != null)

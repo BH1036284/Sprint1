@@ -18,7 +18,7 @@ main[b-556h2dwooe] {
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
-    align-items: center;
+    align-items: left;
 }
 
     .top-row[b-556h2dwooe]  a, .top-row[b-556h2dwooe]  .btn-link {
@@ -66,7 +66,7 @@ main[b-556h2dwooe] {
 
     .top-row.auth[b-556h2dwooe]  a:first-child {
         flex: 1;
-        text-align: right;
+        text-align: left;
         width: 0;
     }
 
